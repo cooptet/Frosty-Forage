@@ -26398,10 +26398,6 @@ PrefabInstance:
       value: 152894
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].name
-      value: Bushes
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].name
       value: Acorns
       objectReference: {fileID: 0}
@@ -26412,18 +26408,6 @@ PrefabInstance:
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[5].name
       value: Plants
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].density
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].maxTilt
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].padding
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].density
@@ -26444,18 +26428,6 @@ PrefabInstance:
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[4].padding
       value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].maxCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].noiseMax
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].noiseMin
-      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].maxCount
@@ -26490,10 +26462,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1636406569}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].noiseScale
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].noiseScale
       value: 0.2
       objectReference: {fileID: 0}
@@ -26502,28 +26470,8 @@ PrefabInstance:
       value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].minDistance
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].tryDownsize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].useCrowding
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].minDistance
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].tryDownsize
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].useCrowding
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[4].minDistance
@@ -26532,22 +26480,6 @@ PrefabInstance:
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[5].minDistance
       value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].blocksOthers
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].scaleRange.x
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].scaleRange.y
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].blocksOthers
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].scaleRange.x
@@ -26566,42 +26498,6 @@ PrefabInstance:
       value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].crowdingRadius
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].noiseInfluence
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].crowdingRadius
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].noiseInfluence
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].groupStickiness
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].groupStickiness
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].crowdingSaturation
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].crowdingSaturation
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].groups.Array.data[0].name
-      value: Bushes
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].groups.Array.data[0].name
       value: Acorns
       objectReference: {fileID: 0}
@@ -26614,20 +26510,12 @@ PrefabInstance:
       value: Plants
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].groups.Array.data[0].weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].groups.Array.data[0].weight
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[5].groups.Array.data[0].weight
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].groups.Array.data[0].prefabs.Array.size
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].groups.Array.data[0].prefabs.Array.size
@@ -26638,25 +26526,9 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: 'layers.Array.data[2].groups.Array.data[0].prefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1432768234038216, guid: c7d607d64fbd50c47a403e376371fdbb, type: 3}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].sizeByDistance.m_Curve.Array.data[1].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: 'layers.Array.data[3].groups.Array.data[0].prefabs.Array.data[0]'
       value: 
       objectReference: {fileID: 5351860473849135143, guid: f396d361e58c21444acee2eac8608a84, type: 3}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: 'layers.Array.data[3].groups.Array.data[0].prefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 1058865715300318, guid: 55ac93c45f693b54b9351f9da4f3bd52, type: 3}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: 'layers.Array.data[3].groups.Array.data[0].prefabs.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1573215304487126, guid: 914e47e8147edab47850c040034efb09, type: 3}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].sizeByDistance.m_Curve.Array.data[1].value
       value: 1
@@ -26682,27 +26554,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].sizeByDistance.m_Curve.Array.data[1].inSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].sizeByDistance.m_Curve.Array.data[1].inSlope
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[5].sizeByDistance.m_Curve.Array.data[1].inSlope
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByCrowding.m_Curve.Array.data[1].value
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByDistance.m_Curve.Array.data[0].value
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].sizeByDistance.m_Curve.Array.data[0].outSlope
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
@@ -26730,14 +26586,6 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByCrowding.m_Curve.Array.data[1].inSlope
-      value: -0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByDistance.m_Curve.Array.data[1].inSlope
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].densityByCrowding.m_Curve.Array.data[1].inSlope
       value: 0
       objectReference: {fileID: 0}
@@ -26754,31 +26602,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByCrowding.m_Curve.Array.data[0].outSlope
-      value: -0.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByDistance.m_Curve.Array.data[0].outSlope
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByDistance.m_Curve.Array.data[1].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].sizeByDistance.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].sizeByDistance.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[3].densityByCrowding.m_Curve.Array.data[0].outSlope
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[3].densityByDistance.m_Curve.Array.data[0].outSlope
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
@@ -26807,14 +26631,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
       propertyPath: layers.Array.data[5].sizeByDistance.m_Curve.Array.data[1].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByCrowding.m_Curve.Array.data[0].tangentMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
-      propertyPath: layers.Array.data[2].densityByCrowding.m_Curve.Array.data[1].tangentMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8173028192668389539, guid: 3e0648ccbe7b6944d907e220a4240900, type: 3}
