@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4310873177584372}
   - component: {fileID: 33457680652986878}
   - component: {fileID: 23525085725585966}
-  - component: {fileID: 7584452757524744164}
+  - component: {fileID: 4171713823878949307}
   m_Layer: 0
   m_Name: Winter Rock 1
   m_TagString: Untagged
@@ -93,8 +93,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7584452757524744164
-BoxCollider:
+--- !u!135 &4171713823878949307
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,5 +112,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.009951379, y: 0.0063175494, z: 0.010349288}
-  m_Center: {x: 0.00043307422, y: 0.0023911998, z: 0.00009733558}
+  m_Radius: 0.006047125
+  m_Center: {x: 0.00014401435, y: 0.0023911993, z: 0.00012771666}
