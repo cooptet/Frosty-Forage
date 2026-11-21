@@ -1,0 +1,192 @@
+GradientAtlas Documentation
+===========================
+
+Version: 1.0
+Package type: Unity Editor tooling
+
+
+1. Overview
+-----------
+
+GradientAtlas is a Unity editor-only tool for authoring many gradients at once and baking them into a single square PNG texture. Gradients are edited in a grid in the Inspector that matches the layout of the baked texture.
+
+Typical use cases include:
+
+- Gradient-mapped or ramp-based shaders that sample one strip per material.
+- Stylised toon lighting ramps.
+- Palette textures shared by many low-poly models.
+- Round-tripping an atlas through an image editor and back into editable gradients.
+
+
+2. Installation
+---------------
+
+Import the GradientAtlas folder into a Unity project. The package is self-contained under:
+
+Assets/DuzeraTools/GradientAtlas
+
+No scene setup or runtime initialization is required.
+
+
+3. Quick Start
+--------------
+
+1. Right-click in the Project window.
+2. Choose Create > DuzeraTools > Gradient Atlas.
+3. Set the Atlas Resolution, Gradient Width and Gradient Height.
+4. Edit the gradients in the grid.
+5. Click Generate/Update Atlas.
+6. Assign the generated <AssetName>_atlas.png to your materials.
+
+Example:
+
+- Atlas Resolution 256, Gradient Width 32, Gradient Height 64.
+- The grid is 8 columns by 4 rows, 32 gradient slots in total.
+- Each slot bakes into a 32 x 64 pixel strip of the 256 x 256 PNG.
+
+
+4. Editor-Only Behavior
+-----------------------
+
+All atlas data and baking code only exist in the Unity Editor. In a build the GradientAtlasSO asset is empty.
+
+Materials and scripts should reference the baked PNG, not the atlas asset.
+
+
+5. Atlas Settings
+-----------------
+
+Atlas Resolution:
+- Size of the square PNG in pixels, from 8 to 1024.
+
+Gradient Width:
+- Width of each cell. Columns = Atlas Resolution / Gradient Width.
+- Clamped to the Atlas Resolution.
+
+Gradient Height:
+- Height of each cell. Rows = Atlas Resolution / Gradient Height.
+- Clamped to the Atlas Resolution.
+
+Auto Update:
+- Re-bakes the PNG on the next editor tick whenever a value changes.
+- Skips the bake when nothing changed since the last one.
+
+
+6. Gradient Grid
+----------------
+
+The number of gradient slots always equals Columns x Rows. Changing the resolutions grows or shrinks the grid. Existing slots keep their gradients where they still fit.
+
+Layout:
+- Slots are ordered row by row. Slot 0 is the top-left cell.
+- Each cell is drawn vertically in the Inspector, like its strip in the PNG.
+- The gradient runs bottom to top: t = 0 at the bottom of the cell, t = 1 at the top.
+- The colour is constant across the width of a cell.
+- Empty slots bake white.
+
+
+7. Baking
+---------
+
+Generate/Update Atlas writes <AssetName>_atlas.png into the same folder as the atlas asset. Spaces in the asset name become underscores.
+
+On the first bake the texture importer is set to:
+- Wrap Mode: Clamp
+- Generate Mip Maps: off
+- Non-Power of 2: None
+
+Later bakes overwrite the same PNG and keep any import settings you changed.
+
+Lowering the PNG's import Max Size only shrinks the imported texture. The grid, the slot count and the PNG on disk stay the same. Cell boundaries divide the resolution evenly, so UV rects remain exact.
+
+The atlas asset must be saved in the project before it can be baked.
+
+
+8. Reading From PNG
+-------------------
+
+Read From PNG rebuilds the gradients from the baked PNG. This lets you paint over the atlas in an image editor and bring the result back into editable gradients.
+
+For each cell:
+1. Each row of pixels is averaged across the cell width.
+2. A gradient is fitted to the averaged column, adding keys where the error is largest.
+3. Fitting stops when every sample is within 1.5/255 of the source, or when the gradient reaches Unity's limit of 8 colour keys and 8 alpha keys.
+
+The gradient mode and colour space of each existing slot are kept.
+
+If the PNG size does not match the Atlas Resolution, cells are read proportionally and a warning is logged. The action supports Undo.
+
+
+9. Scripting API
+----------------
+
+All members are available in the Editor only.
+
+Texture
+- The baked PNG texture.
+
+Gradients
+- The gradient slots, row by row from the top-left.
+
+AtlasResolution, GradientWidth, GradientHeight
+- The configured sizes in pixels.
+
+Columns, Rows, Count
+- The grid layout.
+
+GetUVRect(int slotIndex)
+- Normalized UV rect of a slot. Returns Rect.zero for an invalid index.
+
+GetPixelRect(int slotIndex)
+- Pixel rect of a slot in the imported texture.
+
+UpdateAtlas()
+- Bakes the PNG. Same as the Generate/Update Atlas button.
+
+ReadFromPng()
+- Rebuilds the gradients from the PNG. Same as the Read From PNG button.
+
+Example:
+
+using DuzeraTools.GradientAtlas;
+using UnityEngine;
+
+Rect uv = atlas.GetUVRect(3);
+material.SetVector("_GradientRect", new Vector4(uv.x, uv.y, uv.width, uv.height));
+
+
+10. Troubleshooting
+-------------------
+
+Generate/Update Atlas logs "save the atlas asset before baking it":
+- The atlas is not an asset in the project yet. Create it through the Create menu.
+
+Some cells collapse to zero pixels:
+- The PNG's import Max Size is smaller than the number of columns or rows. Raise the Max Size.
+
+Read From PNG logs "no atlas PNG to read":
+- Generate the atlas first.
+
+Read From PNG logs "must be a readable square image":
+- The PNG was resized to a non-square image in an image editor. Keep it square.
+
+Colours look washed out or too dark in a shader:
+- Check the sRGB (Color Texture) setting on the PNG importer against how your shader samples it.
+
+
+11. Included File Structure
+---------------------------
+
+GradientAtlas/
+- README.md
+- Documentation.txt
+- Scripts/
+  - GradientAtlasSO.cs
+  - Editor/
+    - GradientAtlasSOEditor.cs
+
+
+12. Support Notes
+-----------------
+
+This asset is designed to author and bake gradient textures in the Editor. It does not include shaders; sample the baked PNG from your own shaders or Shader Graphs.
