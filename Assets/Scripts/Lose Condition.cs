@@ -1,13 +1,18 @@
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoseCondition : MonoBehaviour
 {
+    [SerializeField] private GameObject squirrel;
     public void EndGame()
     {
-        //TODO: player should stop and do sleeping animation,
-        //TODO: time delay, only load scene after some time has passed to see sleeping player
-        
+        squirrel.GetComponent<SquirrelPlayer>().SetSleeping(true);
+         Invoke(nameof(LoadGameOver), 3);
+    }
+
+    public void LoadGameOver()
+    {
         SceneManager.LoadScene(3); //Load Game over scene
     }
 }

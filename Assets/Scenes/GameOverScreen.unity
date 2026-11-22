@@ -6473,6 +6473,7 @@ GameObject:
   - component: {fileID: 1413639539}
   - component: {fileID: 1413639538}
   - component: {fileID: 1413639537}
+  - component: {fileID: 1413639540}
   m_Layer: 0
   m_Name: SquirrelPlayer
   m_TagString: Untagged
@@ -6530,14 +6531,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413639536}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.82050145, z: -0, w: 0.5716444}
+  m_LocalRotation: {x: 0, y: 0.8516173, z: -0, w: -0.5241641}
   m_LocalPosition: {x: 146.22769, y: 0.33, z: 26.285597}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 278453075}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 110.27, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 243.224, z: 0}
+--- !u!114 &1413639540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413639536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8e9a483a8a1da49bccbc7acc33060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuPlayerBehaviour
 --- !u!1001 &1435119663
 PrefabInstance:
   m_ObjectHideFlags: 0
