@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DayNightCycle : MonoBehaviour
 {
@@ -26,11 +27,17 @@ public class DayNightCycle : MonoBehaviour
 
     private bool hasEnded;
 
+    private Slider slider;
+
     private void Start()
     {
+        //Initialize slider
+        slider = GameObject.Find("DayCycleSlider").GetComponent<Slider>();
+        
         // Start just after sunrise.
         timeOfDay = 0.02f;
         UpdateEnvironment();
+        UpdateSlider();
     }
 
     private void Update()
@@ -41,6 +48,7 @@ public class DayNightCycle : MonoBehaviour
         timeOfDay = Mathf.Clamp01(timeOfDay);
 
         UpdateEnvironment();
+        UpdateSlider();
 
         if (timeOfDay >= 1f)
         {
@@ -64,5 +72,10 @@ public class DayNightCycle : MonoBehaviour
         // Update ambient lighting.
         RenderSettings.ambientLight =
             ambientColor.Evaluate(timeOfDay);
+    }
+
+    private void UpdateSlider()
+    {
+        slider.value = timeOfDay;
     }
 }

@@ -6,7 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7d466f43941258f4ab3e2393113de865
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 1c9e50cb1ac5e784ba0f9f3dc59a9259
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 646ff3c90179e304d849bb13a56fc859
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 17c0ca95231d58b4bbad2c054617c9cb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
