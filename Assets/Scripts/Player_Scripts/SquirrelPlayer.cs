@@ -11,10 +11,18 @@ public sealed class SquirrelPlayer : MonoBehaviour {
     [SerializeField] private float sprintSpeed = 3.8f;
     [SerializeField] private float digRadius = 0.9f;
 
+
     [SerializeField] private GameObject dugUpAcorn;
     [SerializeField] private float acornForwardOffset = 0.8f;
 
     [SerializeField] private LayerMask groundLayer;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip footstepSound;
+    [SerializeField] private AudioClip munchSound;
+    [SerializeField] private AudioClip digSound;
+    [SerializeField] private AudioClip sniffSound;
 
     private enum Activity { Free, Scan, Dig, Sleep }
 
@@ -72,15 +80,20 @@ public sealed class SquirrelPlayer : MonoBehaviour {
                 if (scan) {
                     hintedAcorn = null;
                     SetActivity(Activity.Scan, ScanDuration);
+                    if (audioSource != null && sniffSound != null)
+                        audioSource.PlayOneShot(sniffSound);
                 }
                 else if (dig) {
                     SetActivity(Activity.Dig, DigDuration);
+                    if (audioSource != null && digSound != null)
+                        audioSource.PlayOneShot(digSound);
                 }
             }
         }
 
         if (activity != Activity.Free) input = Vector2.zero;
         Move(input, sprint, dt);
+        UpdateFootsteps();
 
         if (wasForaging) AdvanceAction(dt);
     }
@@ -146,6 +159,10 @@ public sealed class SquirrelPlayer : MonoBehaviour {
         
         if (hintedAcorn == acorn) hintedAcorn = null;
         ShowDugUpAcorn();
+
+        if (audioSource != null && munchSound != null)
+        audioSource.PlayOneShot(munchSound);
+
         AcornCollected?.Invoke(acorn);
     }
 
@@ -169,7 +186,7 @@ public sealed class SquirrelPlayer : MonoBehaviour {
         }
         else
         {
-            Debug.LogWarning("Couldn't find ground for dug-up acorn!");
+            Debug.LogWarning("Couldn't find ground for dug-up acorn.");
             return;
         }
 
@@ -252,4 +269,28 @@ public sealed class SquirrelPlayer : MonoBehaviour {
 #endif
         move = Vector2.ClampMagnitude(new Vector2(x, z), 1f);
     }
+
+    private float footstepTimer;
+
+    private void UpdateFootsteps()
+    {
+        if (!controller.isGrounded || horizontalVelocity.magnitude < 0.1f)
+        {
+            footstepTimer = 0f;
+            return;
+        }
+
+        footstepTimer -= Time.deltaTime;
+
+        if (footstepTimer <= 0f)
+        {
+            if (audioSource != null && footstepSound != null)
+                audioSource.PlayOneShot(footstepSound);
+
+                footstepTimer = horizontalVelocity.magnitude > trotSpeed + 0.2f
+                    ? 0.35f
+                    : 0.5f;
+        }
+    }
 }
+
