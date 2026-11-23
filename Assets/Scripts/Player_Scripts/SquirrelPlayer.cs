@@ -11,6 +11,11 @@ public sealed class SquirrelPlayer : MonoBehaviour {
     [SerializeField] private float sprintSpeed = 3.8f;
     [SerializeField] private float digRadius = 0.9f;
 
+    [SerializeField] private GameObject dugUpAcorn;
+    [SerializeField] private float acornForwardOffset = 0.8f;
+
+    [SerializeField] private LayerMask groundLayer;
+
     private enum Activity { Free, Scan, Dig, Sleep }
 
     private const float ScanDuration = 1.6f;
@@ -138,8 +143,43 @@ public sealed class SquirrelPlayer : MonoBehaviour {
         SquirrelAcornTarget acorn = FindNearest(digRadius);
         if (acorn == null || !acorn.TryCollect()) return;
 
+        
         if (hintedAcorn == acorn) hintedAcorn = null;
+        ShowDugUpAcorn();
         AcornCollected?.Invoke(acorn);
+    }
+
+    private void ShowDugUpAcorn()
+    {
+        if (dugUpAcorn == null) return;
+
+        Vector3 spawnPosition =
+            transform.position + transform.forward * acornForwardOffset;
+
+        Vector3 rayOrigin = spawnPosition + Vector3.up * 5f;
+
+        if (Physics.Raycast(
+            rayOrigin,
+            Vector3.down,
+            out RaycastHit hit,
+            15f,
+            groundLayer))
+        {
+            spawnPosition = hit.point;
+        }
+        else
+        {
+            Debug.LogWarning("Couldn't find ground for dug-up acorn!");
+            return;
+        }
+
+        GameObject spawnedAcorn = Instantiate(
+            dugUpAcorn,
+            spawnPosition,
+            Quaternion.identity
+        );
+
+        Destroy(spawnedAcorn, 1f);
     }
 
     private SquirrelAcornTarget FindNearest(float maxDistance) {
