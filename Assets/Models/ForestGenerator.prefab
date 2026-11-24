@@ -64,6 +64,133 @@ MonoBehaviour:
     radius: 0
     padding: 0
   layers:
+  - name: Acorns
+    enabled: 1
+    groups:
+    - name: Acorns
+      weight: 2
+      prefabs:
+      - {fileID: 5351860473849135143, guid: f396d361e58c21444acee2eac8608a84, type: 3}
+    variantOrder: 0
+    sizeMode: 1
+    sizeByDistance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    sizeJitter: 0.15
+    groupStickiness: 0
+    clusterRadius: 6
+    minDistance: 15
+    density: 2
+    densityByDistance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.49952316
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 1
+        value: 0.49952316
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    useCrowding: 0
+    crowdingRadius: 4
+    crowdingSaturation: 5
+    densityByCrowding:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    maxCount: 3
+    noiseInfluence: 0
+    noiseScale: 0.2
+    noiseMin: 0.5
+    noiseMax: 0.75
+    blocksOthers: 1
+    avoidBlockers: 1
+    padding: 0.1
+    footprintMultiplier: 1
+    tryDownsize: 0
+    scaleRange: {x: 1, y: 1}
+    scaleByDistance:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    randomYaw: 1
+    maxTilt: 4
+    yOffset: 0
   - name: Trees
     enabled: 1
     groups:
@@ -463,133 +590,6 @@ MonoBehaviour:
       m_RotationOrder: 4
     randomYaw: 1
     maxTilt: 0
-    yOffset: 0
-  - name: Acorns
-    enabled: 1
-    groups:
-    - name: Acorns
-      weight: 2
-      prefabs:
-      - {fileID: 5351860473849135143, guid: f396d361e58c21444acee2eac8608a84, type: 3}
-    variantOrder: 0
-    sizeMode: 1
-    sizeByDistance:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    sizeJitter: 0.15
-    groupStickiness: 0
-    clusterRadius: 6
-    minDistance: 6
-    density: 2
-    densityByDistance:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    useCrowding: 0
-    crowdingRadius: 4
-    crowdingSaturation: 5
-    densityByCrowding:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    maxCount: 3
-    noiseInfluence: 1
-    noiseScale: 0.2
-    noiseMin: 0.5
-    noiseMax: 0.75
-    blocksOthers: 0
-    avoidBlockers: 1
-    padding: 0.1
-    footprintMultiplier: 1
-    tryDownsize: 0
-    scaleRange: {x: 1, y: 1}
-    scaleByDistance:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    randomYaw: 1
-    maxTilt: 4
     yOffset: 0
   - name: Grass
     enabled: 1
