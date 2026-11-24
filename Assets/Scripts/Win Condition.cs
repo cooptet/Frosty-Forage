@@ -10,6 +10,7 @@ public class WinCondition : MonoBehaviour
     private int acornsFound;
     [SerializeField] private int acornsUntilWon;
     [SerializeField] private TextMeshProUGUI acornUI;
+    [SerializeField] private GameObject acornFoundPopUp;
     void OnEnable()
     {
         acornUI = GameObject.Find("Acorn Counter").GetComponent<TextMeshProUGUI>();
@@ -41,6 +42,9 @@ public class WinCondition : MonoBehaviour
     {
         acornsFound += 1;
         UpdateUI();
+        
+        acornFoundPopUp.SetActive(true);
+        Invoke(nameof(HidePopUp), 1);
 
         if (acornsFound == acornsUntilWon)
         {
@@ -51,5 +55,10 @@ public class WinCondition : MonoBehaviour
     private void LoadWonScene()
     {
         SceneManager.LoadScene(2); //Load won scene
+    }
+
+    private void HidePopUp()
+    {
+        acornFoundPopUp.SetActive(false);
     }
 }

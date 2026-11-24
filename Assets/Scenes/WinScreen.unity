@@ -7600,7 +7600,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1749972537}
   - component: {fileID: 1749972536}
-  - component: {fileID: 1749972535}
   m_Layer: 0
   m_Name: SquirrelPlayer
   m_TagString: Untagged
@@ -7608,23 +7607,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1749972535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1749972534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d4562fe789cc44dbf2ed6fba084883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SquirrelPlayer
-  followCamera: {fileID: 0}
-  animator: {fileID: 1805935263}
-  trotSpeed: 2.4
-  sprintSpeed: 3.8
-  digRadius: 0.9
 --- !u!143 &1749972536
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8053,11 +8035,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26c55e509ad9ba4aad4fbdba9668a0e, type: 3}
---- !u!95 &1805935263 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: f26c55e509ad9ba4aad4fbdba9668a0e, type: 3}
-  m_PrefabInstance: {fileID: 1805935262}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1805935264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f26c55e509ad9ba4aad4fbdba9668a0e, type: 3}
@@ -8960,8 +8937,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "You Found \nAll Acorns!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 230ff8ca72e7a564cb3a7134fe03a230, type: 2}
-  m_sharedMaterial: {fileID: -7527418877153827435, guid: 230ff8ca72e7a564cb3a7134fe03a230, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b5eb0cc2289fab14284326eeb574c079, type: 2}
+  m_sharedMaterial: {fileID: -6753723746149418804, guid: b5eb0cc2289fab14284326eeb574c079, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8991,11 +8968,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 18
+  m_fontStyle: 19
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: -3
+  m_characterSpacing: -5
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: -20

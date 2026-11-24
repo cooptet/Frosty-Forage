@@ -748,7 +748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Collect three acorns that are buried in the forest. \nFind them all before the day is over.\n\nUse the squirrel's senses to scan your surroundings and get hints about the acorns' locations (Q). \nWhen you think you are in the right location, dig up the acorn (E).\n\nMove using WASD. Sprint with shift.\nUse R to re-center the camera. "
+  m_text: "Collect three acorns that are buried in the forest. \nFind them all before the day is over.\n\nUse the squirrel's senses to scan your surroundings and get hints about the acorns' locations (Q). The arrow that appears points in the direction of the next acorn. Its color ranges from red (close) to blue (far away).\nWhen you think you are in the right location, dig up the acorn (E).\n\nUse WASD to move. Sprint with shift.\nUse R to re-center the camera. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b5eb0cc2289fab14284326eeb574c079, type: 2}
   m_sharedMaterial: {fileID: -6753723746149418804, guid: b5eb0cc2289fab14284326eeb574c079, type: 2}
