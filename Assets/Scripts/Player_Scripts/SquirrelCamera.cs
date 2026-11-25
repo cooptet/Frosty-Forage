@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -69,6 +70,7 @@ public sealed class SquirrelCamera : MonoBehaviour {
 
         if (escape) {
             SetCursor(false);
+            SceneManager.LoadScene("MainMenu");
             return;
         }
 
