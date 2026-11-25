@@ -108,6 +108,14 @@ If time runs out, the squirrel enters its sleeping state, accompanied by visual 
 - Unity Character Controller and Physics
 - Unity UI and TextMeshPro
 
+## Screenshots
+
+| Main Menu | Gameplay |
+|:---:|:---:|
+| ![Main Menu](Images/mainMenu.png) | ![During gameplay](Images/gameplay.png) |
+| **Base Map** | **Procedurally Generated Map** |
+| ![Gameplay](Images/emptyMap.png) | ![Base Map](Images/pcgMap.png) |
+
 ## Credits
 
 Developed by **Cooptet**.
